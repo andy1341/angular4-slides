@@ -1,0 +1,27 @@
+{
+  "name": "angular4-slides",
+  "version": "0.0.1",
+  "main": [
+    "js/reveal.js",
+    "css/reveal.css"
+  ],
+  "homepage": "/",
+  "license": "MIT",
+  "description": "Angular 4 slides",
+  "authors": [
+    "Andrii Novikov <andrii.novikov@rubygarage.org>"
+  ],
+  "dependencies": {
+    "headjs": "~1.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/andy1341/angular4-slides.git"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ]
+}
