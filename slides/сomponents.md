@@ -71,7 +71,7 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'counter',
-  template: 'counter.html'
+  templateUrl: 'counter.component.html'
 })
 
 export class Counter {
@@ -86,7 +86,7 @@ export class Counter {
 ```
 
 ```html
-<!-- counter.html -->
+<!-- counter.component.html -->
 <div>
   <p>Count: {{ count }}</p>
   <button (click)="increment()">Increment</button>
@@ -101,7 +101,7 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'app',
-  template: `app.html`
+  templateUrl: `app.component.html`
 })
 
 export class App {
@@ -120,7 +120,7 @@ export class App {
 ```
 
 ```html
-<!-- app.html -->
+<!-- app.component.html -->
 <div>
   Parent Num: {{ num }}<br />
   Parent Count: {{ parentCount }}
@@ -147,7 +147,7 @@ import {Component, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'counter',
-  template: 'counter.html'
+  templateUrl: 'counter.component.html'
 })
 
 export class Counter {
@@ -222,6 +222,7 @@ class ChildComponent {}
 * `ngOnDestroy` - just before the component is destroyed
 
 
+<!-- .element: class="fs-70" -->
 ### Accessing Child Component Classes
 ```
 import {Component, QueryList, ViewChild, ViewChildren} from '@angular/core';
@@ -229,13 +230,7 @@ import {Alert} from './alert.component';
 
 @Component({
   selector: 'app',
-  template: `
-    <my-alert #first ok="Next" (close)="showAlert(2)">
-      Step 1: Learn angular
-    </my-alert>
-    <my-alert ok="Next" (close)="showAlert(3)">Step 2: Love angular</my-alert>
-    <my-alert ok="Close">Step 3: Build app</my-alert>
-    <button (click)="showAlert(1)">Show steps</button>`
+  templateUrl: 'app.component.html'
 })
 export class App {
   @ViewChild('first') alerts: Alert;
@@ -250,4 +245,14 @@ export class App {
     this.first.show();
   }
 }
+```
+
+```html
+<!--app.component.html-->
+<my-alert #first ok="Next" (close)="showAlert(2)">
+  Step 1: Learn angular
+</my-alert>
+<my-alert ok="Next" (close)="showAlert(3)">Step 2: Love angular</my-alert>
+<my-alert ok="Close">Step 3: Build app</my-alert>
+<button (click)="showAlert(1)">Show steps</button>
 ```
