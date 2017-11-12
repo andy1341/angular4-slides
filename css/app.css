@@ -1,0 +1,20 @@
+.fs-100 {
+  font-size: 100% !important; }
+
+.fs-90 {
+  font-size: 90% !important; }
+
+.fs-80 {
+  font-size: 80% !important; }
+
+.fs-70 {
+  font-size: 70% !important; }
+
+.fs-60 {
+  font-size: 60% !important; }
+
+.fs-50 {
+  font-size: 50% !important; }
+
+.reveal pre code {
+  max-height: 500px; }
