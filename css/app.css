@@ -18,3 +18,13 @@
 
 .reveal pre code {
   max-height: 500px; }
+
+.left {
+  float: left!important;
+  width: 47%!important;
+}
+
+.right {
+  float: right!important;
+  width: 47%!important;
+}
